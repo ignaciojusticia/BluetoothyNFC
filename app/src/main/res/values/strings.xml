@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BT-NFC Writer</string>
+    <string name="nombre">Nombre del dispositivo bluetooth</string>
+    <string name="direccion">Dirección bluetooth</string>
+        <declare-styleable name="MyGallery">
+            <attr name="android:galleryItemBackground" />
+        </declare-styleable>
+</resources>
