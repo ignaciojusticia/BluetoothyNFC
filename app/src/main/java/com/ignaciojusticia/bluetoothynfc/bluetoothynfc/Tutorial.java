@@ -12,11 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Tutorial extends Activity {
+
+    Button saltar;
 
     Integer[] imageIDs = {
             R.drawable.uno_opt,
@@ -26,8 +29,6 @@ public class Tutorial extends Activity {
             R.drawable.cinco_opt,
             R.drawable.ayuda_opt,
     };
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,17 @@ public class Tutorial extends Activity {
 
             }
         });
+
+        saltar = (Button) findViewById(R.id.saltar);
+        saltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
     }
 
