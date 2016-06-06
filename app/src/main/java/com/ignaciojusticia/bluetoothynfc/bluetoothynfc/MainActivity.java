@@ -1,6 +1,5 @@
 package com.ignaciojusticia.bluetoothynfc.bluetoothynfc;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -9,7 +8,6 @@ import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
@@ -23,14 +21,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * @author Ignacio Justicia Ramos
+ */
+
 public class MainActivity extends AppCompatActivity {
-    //SharedPreferences prefs = null;
     private EditText nombre, direccion;
     private String name, macAddress;
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //prefs = getSharedPreferences("com.ignaciojusticia.bluetoothynfc.bluetoothynfc", MODE_PRIVATE);
+
         // Botón de escribir etiqueta
         ((ImageButton) findViewById(R.id.boton)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -314,12 +314,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-/*
-        if (prefs.getBoolean("firstrun", true)) {
-            // Do first run stuff here then set 'firstrun' as false
-            // using the following line to edit/commit prefs
-            prefs.edit().putBoolean("firstrun", false).commit();
-        }*/
     }
 
 

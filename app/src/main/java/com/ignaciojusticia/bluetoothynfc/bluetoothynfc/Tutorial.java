@@ -16,6 +16,9 @@ import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.Toast;
+/**
+ * @author Ignacio Justicia Ramos
+ */
 
 public class Tutorial extends Activity {
 
@@ -63,8 +66,6 @@ public class Tutorial extends Activity {
                 finish();
             }
         });
-
-
     }
 
     public class ImageAdapter extends BaseAdapter {
